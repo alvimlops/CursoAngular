@@ -1,3 +1,4 @@
+import { CursoService } from './curso.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,6 +16,7 @@ import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretiv
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HeghlightDirective } from './shared/heghlight.directive';
 import { NgElsesDirective } from './shared/ng-elses.directive';
+import { CursosComponent } from './cursos/cursos.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,13 @@ import { NgElsesDirective } from './shared/ng-elses.directive';
     DiretivasCustomizadasComponent,
     HighlightMouseDirective,
     HeghlightDirective,
-    NgElsesDirective
+    NgElsesDirective,
+    CursosComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CursoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
